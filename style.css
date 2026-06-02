@@ -1,0 +1,594 @@
+/* ==========================
+   GLOBAL
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:linear-gradient(
+        135deg,
+        #050816,
+        #0b1120,
+        #111827
+    );
+
+    color:white;
+    overflow-x:hidden;
+}
+
+#particles{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    z-index:-1;
+}
+
+/* ==========================
+   NAVBAR
+========================== */
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:20px 8%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(15px);
+
+    z-index:1000;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:#00f5ff;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    transition:.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active{
+    color:#00f5ff;
+}
+
+/* ==========================
+   HERO
+========================== */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:100px 10%;
+}
+
+.hero-content{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:60px;
+    flex-wrap:wrap;
+}
+
+.hero-text{
+    flex:1;
+}
+
+.hero-text h1{
+    font-size:4rem;
+    margin-bottom:15px;
+}
+
+.hero-text h2{
+    color:#00f5ff;
+    min-height:60px;
+}
+
+.hero-text p{
+    margin-top:20px;
+    line-height:1.8;
+    color:#d1d5db;
+}
+
+.hero-image img{
+
+    width:320px;
+    height:320px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:4px solid #00f5ff;
+
+    transition:.4s ease;
+
+    box-shadow:
+        0 0 30px #00f5ff,
+        0 0 60px rgba(0,245,255,0.5),
+        0 0 100px rgba(0,245,255,0.2);
+}
+
+.hero-image img:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:
+        0 0 40px #00f5ff,
+        0 0 80px rgba(0,245,255,0.6),
+        0 0 120px rgba(0,245,255,0.3);
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+
+.buttons{
+    margin-top:30px;
+}
+
+.btn,
+.btn-outline{
+
+    display:inline-block;
+
+    padding:12px 25px;
+
+    border-radius:30px;
+
+    text-decoration:none;
+
+    margin-right:15px;
+
+    transition:.3s;
+}
+
+.btn{
+    background:#00f5ff;
+    color:black;
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+}
+
+.btn-outline{
+    border:2px solid #00f5ff;
+    color:#00f5ff;
+}
+
+.btn-outline:hover{
+    background:#00f5ff;
+    color:black;
+}
+
+.socials{
+    margin-top:30px;
+}
+
+.socials a{
+    color:white;
+    text-decoration:none;
+    margin-right:20px;
+    transition:.3s;
+}
+
+.socials a:hover{
+    color:#00f5ff;
+}
+
+/* ==========================
+   SECTIONS
+========================== */
+
+section{
+    padding:100px 10%;
+}
+
+.section-title{
+
+    text-align:center;
+
+    font-size:2.5rem;
+
+    color:#00f5ff;
+
+    margin-bottom:50px;
+}
+
+/* ==========================
+   GLASS CARD
+========================== */
+
+.glass-card{
+
+    background:rgba(255,255,255,0.06);
+
+    border:1px solid rgba(255,255,255,0.1);
+
+    backdrop-filter:blur(25px);
+
+    border-radius:24px;
+
+    padding:30px;
+
+    line-height:1.8;
+
+    transition:.4s;
+}
+
+.glass-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+        0 0 20px rgba(0,245,255,0.15);
+}
+
+/* ==========================
+   SKILLS
+========================== */
+
+.skills-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(320px,1fr));
+
+    gap:30px;
+}
+
+.skill-card{
+
+    background:rgba(255,255,255,0.08);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    border-radius:20px;
+
+    padding:25px;
+
+    transition:0.4s ease;
+}
+
+.skill-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#00f5ff;
+
+    box-shadow:
+        0 0 20px rgba(0,245,255,0.2),
+        0 0 40px rgba(0,245,255,0.1);
+}
+
+.skill-card h3{
+
+    color:#00f5ff;
+
+    margin-bottom:20px;
+
+    font-size:1.2rem;
+}
+
+.tags{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+}
+
+.tags span{
+
+    background:rgba(0,245,255,0.08);
+
+    border:1px solid rgba(0,245,255,0.2);
+
+    color:#fff;
+
+    padding:8px 14px;
+
+    border-radius:30px;
+
+    font-size:0.9rem;
+
+    transition:0.3s;
+}
+
+.tags span:hover{
+
+    background:#00f5ff;
+
+    color:#050816;
+
+    transform:scale(1.05);
+}
+
+/* ==========================
+   PROJECTS
+========================== */
+
+.project-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(300px,1fr));
+
+    gap:30px;
+}
+
+.project-card{
+
+    background:rgba(255,255,255,0.08);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    transition:.4s ease;
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    position:relative;
+}
+
+.project-card:hover{
+
+    transform:translateY(-10px) scale(1.03);
+
+    box-shadow:
+        0 0 20px rgba(0,245,255,0.2),
+        0 0 40px rgba(0,245,255,0.1);
+}
+
+.project-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.project-card h3{
+    padding:15px;
+}
+
+.project-card p{
+    padding:0 15px 20px;
+}
+
+/* ==========================
+   CODING CARDS
+========================== */
+
+.coding-card{
+    cursor:pointer;
+}
+
+.coding-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-100%;
+
+    width:100%;
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,0.08),
+        transparent
+    );
+
+    transition:.8s;
+}
+
+.coding-card:hover::before{
+    left:100%;
+}
+
+.card-action{
+
+    display:inline-block;
+
+    margin:0 15px 20px;
+
+    color:#00f5ff;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.coding-card:hover .card-action{
+
+    transform:translateX(8px);
+
+    color:white;
+}
+
+/* Platform Glow */
+
+.leetcode:hover{
+    box-shadow:
+        0 0 20px #ffa116,
+        0 0 40px rgba(255,161,22,0.5);
+}
+
+.codechef:hover{
+    box-shadow:
+        0 0 20px #7c5c44,
+        0 0 40px rgba(124,92,68,0.5);
+}
+
+.codeforces:hover{
+    box-shadow:
+        0 0 20px #1f8acb,
+        0 0 40px rgba(31,138,203,0.5);
+}
+
+.github:hover{
+    box-shadow:
+        0 0 20px #8b5cf6,
+        0 0 40px rgba(139,92,246,0.5);
+}
+
+/* ==========================
+   TIMELINE
+========================== */
+
+.timeline{
+    max-width:700px;
+    margin:auto;
+}
+
+.timeline-item{
+
+    background:rgba(255,255,255,0.05);
+
+    border-left:4px solid #00f5ff;
+
+    border-radius:15px;
+
+    padding:20px;
+
+    margin-bottom:25px;
+
+    transition:.3s;
+}
+
+.timeline-item:hover{
+
+    transform:translateX(10px);
+
+    box-shadow:
+        0 0 20px rgba(0,245,255,0.15);
+}
+
+.timeline-item h3{
+    color:#00f5ff;
+}
+
+/* ==========================
+   GALLERY
+========================== */
+
+.gallery{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(250px,1fr));
+
+    gap:20px;
+}
+
+.gallery img{
+
+    width:100%;
+    height:250px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    transition:.4s;
+}
+
+.gallery img:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:
+        0 0 20px rgba(0,245,255,0.2);
+}
+
+/* ==========================
+   CONTACT
+========================== */
+
+#contact p{
+    margin-bottom:15px;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+
+    text-align:center;
+
+    padding:30px;
+
+    color:#9ca3af;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:768px){
+
+    nav ul{
+        display:none;
+    }
+
+    .hero-content{
+        flex-direction:column-reverse;
+        text-align:center;
+    }
+
+    .hero-text h1{
+        font-size:2.8rem;
+    }
+
+    .hero-image img{
+        width:250px;
+        height:250px;
+    }
+
+    .buttons a{
+        display:block;
+        margin:10px auto;
+    }
+
+    .socials a{
+        display:inline-block;
+        margin:10px;
+    }
+}
