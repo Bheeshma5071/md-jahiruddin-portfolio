@@ -128,7 +128,20 @@ window.addEventListener(
 
 revealOnScroll();
 
+// ==========================
+// VISITOR COUNTER
+// ==========================
 
+fetch("https://api.countapi.xyz/hit/md-jahiruddin-portfolio/visits")
+    .then(res => res.json())
+    .then(data => {
+        document.getElementById("visitor-count").innerText = data.value;
+    })
+    .catch(() => {
+        document.getElementById("visitor-count").innerText = "N/A";
+    });
+
+    
 // ==========================
 // PARTICLE BACKGROUND
 // ==========================
